@@ -1,0 +1,157 @@
+.main {
+  color: #DFE3EE;
+}
+
+.search-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-input {
+  min-width: 20%;
+  border: 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding-left: 15px;
+  background-color: #DFE3EE;
+  display: flex;
+}
+
+.search-input input {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #363753;
+  background-color: #DFE3EE;
+}
+
+.search-input input:focus {
+  outline: none;
+}
+
+.search-input img {
+  margin-right: 10px;
+}
+
+.input ul {
+  columns: 3;
+  color: #DFE3EE;
+}
+
+.results {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  color: #DFE3EE;
+}
+
+.sorting-wrapper {
+  width: 22%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results__items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results__item {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #DFE3EE;
+}
+
+.results__item-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #DFE3EE;
+}
+
+.links {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-name {
+  font-size: 1.5rem;
+  color: #DFE3EE;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ul-list {
+  display: flex;
+  justify-content: space-between;
+  color: #DFE3EE;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.ul-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ul-list a {
+  color: #DFE3EE;
+  font-size: 1rem;
+}
+
+.additional-links {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.download-apps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+
+.copy-right {
+  height: 100px;
+}

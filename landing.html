@@ -3,12 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <title>Welcome</title>
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    [href] {
+      text-decoration: none;
+      color: green;
+    }
+    a:link {
+      color: forestgreen;
+    }
+    a:visited {
+      color: forestgreen;
+    }
+    a[href^="#"] {
+      color: red;
+    }
+    section:first-of-type + section {
+      color: yellow;
+    }
+    h3 ~ p {
+      color: blue;
+    }
+    li:first-child {
+      background-color: black;
+    }
+    button:before {
+      content: "♥";
+    }
+    .block {
+      display: block;
+      position: absolute;
+      top: 100px;
+      left: 10px;
+      z-index: 10;
+    }
+    .img-block {
+      position: absolute;
+      z-index: 20;
+      pointer-events: none;
+    }
+    aside {
+      border: cyan 10px;
+      border-style: dashed groove none dotted;
+      background-image: url("https://nlf.com.ua/wp-content/uploads/bfi_thumb/23380258_1730466120346359_5640073272501419345_n-1-30fsyiycq22b1t3og1i3bc3aixlxmhxiljld0z3alkatsgfu8.png");
+    }
+    button {
+      font-family: "monospace", monospace;
+      text-align: right;
+      width: 100px;
+      background-image: url("https://nlf.com.ua/wp-content/uploads/bfi_thumb/23380258_1730466120346359_5640073272501419345_n-1-30fsyiycq22b1t3og1i3bc3aixlxmhxiljld0z3alkatsgfu8.png");
+      box-shadow: black 10px 10px 10px;
+    }
+    label {
+      text-shadow: white 10px 10px 10px;
+    }
+    form {
+      transition: transform 1s ease-in-out;
+      width: 20%;
+    }
+    @keyframes animation2d {
+        0% {
+            transform: translate(0, 0) rotate(0) scale(1) skew(0deg, 0deg);
+        }
+        25% {
+            transform: translate(50px, 30px) rotate(45deg) scale(1.5) skew(10deg, 10deg);
+        }
+        50% {
+            transform: translate(0, 0) rotate(0) scale(1) skew(15deg, 15deg);
+        }
+        75% {
+            transform: translate(-50px, -30px) rotate(-45deg) scale(1) skew(20deg, 20deg);
+        }
+        100% {
+            transform: translate(0, 0) rotate(0) scale(1) skew(30deg, 20deg);
+        }
+    }
+    form:hover {
+        animation: animation2d 3s infinite;
+    }
+    #img-float {
+      float: right;
+    }
+    ol {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    img {
+      filter: sepia(100%);
+    }
+    #businessCard {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      color: #333333;
+      transition: all 0.5s ease;
+    }
+    #businessCard:hover {
+      color: #ffffff;
+      background-color: #007bff;
+    }
+  </style>
 </head>
 <body>
 <header>
   <nav>
     <span class="logo-name">Cube</span>
-    <img src="https://static.thenounproject.com/png/3265142-200.png" alt="Logo">
+    <img src="https://static.thenounproject.com/png/3265142-200.png" alt="Logo" class="img-block">
     <ol>
       <li><a href="#article">Welcome article</a></li>
       <li><a href="#footer">Footer</a></li>
@@ -30,6 +136,11 @@
       </figure>
     </section>
     <section>
+      <img
+            src="https://nlf.com.ua/wp-content/uploads/bfi_thumb/23380258_1730466120346359_5640073272501419345_n-1-30fsyiycq22b1t3og1i3bc3aixlxmhxiljld0z3alkatsgfu8.png"
+            alt="housing and communal services picture" width="200"
+            id="img-float"
+      >
       <p>
         <em>Контент проєкту "Сервісний сайт для оплати послуг газо-, водо- чи електро-постачальних компаній"
         повинен бути таким, щоб він був зрозумілим та інтуїтивно зрозумілим для користувачів.</em> Він також
@@ -43,7 +154,7 @@
         <i>
           Текстовий контент повинен бути написаний простою і зрозумілою мовою. Він повинен бути
           чітким і лаконічним, без зайвих деталей. Текст повинен бути добре структурований і
-          логічно побудований.
+          логічно побудований. <a href="#">Йти сюди</a>
         </i>
       </p>
     </section>
@@ -109,8 +220,10 @@
         <label for="age">Вік:</label>
         <input type="number" id="age" name="age" required><br>
 
-        <label for="message">Повідомлення:</label>
-        <textarea id="message" name="message" rows="4"></textarea><br>
+        <div class="block">
+          <label for="message">Повідомлення:</label>
+          <textarea id="message" name="message" rows="4"></textarea><br>
+        </div>
 
         <label for="education">Освіта:</label>
         <select id="education" name="education" multiple>
@@ -130,7 +243,10 @@
 
         <button type="submit">Надіслати</button>
     </form>
-</main>
+    <div id="businessCard">
+      <h1>Можливо краще?</h1>
+    </div>
+  </main>
 <footer id="footer">
   <p>Виконав студент</p>
   <p>ІПЗ-32 Якубець Михайло</p>

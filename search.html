@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Search page</title>
-  <style>
-    .icon {
-      width: 30px;
-      height: 30px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
 <header>
   <nav>
-    <img src="https://static.thenounproject.com/png/3265142-200.png" alt="Logo">
+    <img
+        src="images/logo.png"
+        alt="Logo"
+        class="logo"
+    >
     <ul>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
@@ -25,22 +26,23 @@
 <main>
   <div class="search-wrapper">
     <div class="input">
-      <input type="text" name="search" placeholder="Find me...">
-      <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1200px-Magnifying_glass_icon.svg.png"
-          alt="magnifying glass"
-          width="50"
-      >
+      <div class="search-input">
+        <input type="text" name="search" placeholder="Find me...">
+        <img
+            src="images/magnifying-glass.png"
+            alt="magnifying glass"
+        >
+      </div>
       <ul>
-        <li><b>Type</b></li>
+        <li>Type</li>
         <li><input type="checkbox">Gas</li>
         <li><input type="checkbox">Water</li>
         <li><input type="checkbox">Electricity</li>
-        <li><b>Payment Status</b></li>
+        <li>Payment Status</li>
         <li><input type="checkbox">Last payment</li>
         <li><input type="checkbox">Payed</li>
         <li><input type="checkbox">For payment</li>
-        <li><b>Rate</b></li>
+        <li>Rate</li>
         <li><input type="checkbox">Increased</li>
         <li><input type="checkbox">Regular</li>
         <li><input type="checkbox">Discount</li>
@@ -49,102 +51,56 @@
     <div class="results">
       <div class="results__header">
         <span>Found 4 companies</span>
-        <label for="sorting">Sort by</label>
-        <select id="sorting" name="sorting">
-            <option value="latest">Latest</option>
-            <option value="newest">Newest</option>
-        </select>
+        <div class="sorting-wrapper">
+          <label for="sorting">Sort by</label>
+          <select id="sorting" name="sorting">
+              <option value="latest">Latest</option>
+              <option value="newest">Newest</option>
+          </select>
+        </div>
       </div>
       <div class="results__items">
         <div class="results__item">
           <div class="results__item-left">
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/882/882027.png"
-                alt="water icon"
-                class="icon"
-            >
+            <img src="images/water.png" alt="water icon">
             <div class="company-name">Glaceau Smartwater</div>
           </div>
           <div class="results__item-right">
-            <img
-                src="https://www.freeiconspng.com/thumbs/dollar-icon-png/dollar-black-circle-icon-28.png"
-                alt="dollar icon"
-                class="icon"
-            >
-            <img
-                src="https://static-00.iconduck.com/assets.00/in-new-tab-icon-2048x2048-8g5ygntm.png"
-                alt="new tab icon"
-                class="icon"
-            >
+            <img src="images/dollar.png" alt="dollar icon">
+            <img src="images/new-tab.png" alt="new tab icon">
             <span>Pay by 22.11.2023</span>
           </div>
         </div>
         <div class="results__item">
           <div class="results__item-left">
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/882/882027.png"
-                alt="water icon"
-                class="icon"
-            >
+            <img src="images/water.png" alt="water icon">
             <div class="company-name">Aquafina</div>
           </div>
           <div class="results__item-right">
-            <img
-                src="https://www.freeiconspng.com/thumbs/dollar-icon-png/dollar-black-circle-icon-28.png"
-                alt="dollar icon"
-                class="icon"
-            >
-            <img
-                src="https://static-00.iconduck.com/assets.00/in-new-tab-icon-2048x2048-8g5ygntm.png"
-                alt="new tab icon"
-                class="icon"
-            >
+            <img src="images/dollar.png" alt="dollar icon">
+            <img src="images/new-tab.png" alt="new tab icon">
             <span>Pay by 12.09.2023</span>
           </div>
         </div>
         <div class="results__item">
           <div class="results__item-left">
-            <img
-                src="https://static.thenounproject.com/png/3066677-200.png"
-                alt="gas icon"
-                class="icon"
-            >
+            <img src="images/fire.png" alt="gas icon">
             <div class="company-name">Southern California Gas Company</div>
           </div>
           <div class="results__item-right">
-            <img
-                src="https://www.freeiconspng.com/thumbs/dollar-icon-png/dollar-black-circle-icon-28.png"
-                alt="dollar icon"
-                class="icon"
-            >
-            <img
-                src="https://static-00.iconduck.com/assets.00/in-new-tab-icon-2048x2048-8g5ygntm.png"
-                alt="new tab icon"
-                class="icon"
-            >
+            <img src="images/dollar.png" alt="dollar icon" >
+            <img src="images/new-tab.png" alt="new tab icon">
             <span>Pay by 06.08.2023</span>
           </div>
         </div>
         <div class="results__item">
           <div class="results__item-left">
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/118/118063.png"
-                alt="light icon"
-                class="icon"
-            >
+            <img src="images/light.png" alt="light icon">
             <div class="company-name">State Grid Corporation</div>
           </div>
           <div class="results__item-right">
-            <img
-                src="https://www.freeiconspng.com/thumbs/dollar-icon-png/dollar-black-circle-icon-28.png"
-                alt="dollar icon"
-                class="icon"
-            >
-            <img
-                src="https://static-00.iconduck.com/assets.00/in-new-tab-icon-2048x2048-8g5ygntm.png"
-                alt="new tab icon"
-                class="icon"
-            >
+            <img src="images/dollar.png" alt="dollar icon">
+            <img src="images/new-tab.png" alt="new tab icon">
             <span>Pay by 17.04.2023</span>
           </div>
         </div>
@@ -153,29 +109,41 @@
   </div>
 </main>
 <footer>
-  <span class="logo-name">Cube</span>
-  <img src="https://static.thenounproject.com/png/3265142-200.png" alt="Logo">
-  <ul>
-    <li>Company</li>
-    <li><a href="#">About us</a></li>
-    <li><a href="#">Newsroom</a></li>
-    <li><a href="#">Investors</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Careers</a></li>
-    <li>Products</li>
-    <li><a href="#">Comfort</a></li>
-    <li><a href="#">Cube for business</a></li>
-    <li><a href="#">Cube for education</a></li>
-    <li><a href="#">Life</a></li>
-    <li>Global citizenship</li>
-    <li><a href="#">Safety</a></li>
-    <li><a href="#">Diversity</a></li>
-    <li><a href="#">Transparency</a></li>
-    <li>Innovation</li>
-    <li><a href="#">ATG</a></li>
-    <li><a href="#">AI</a></li>
-    <li><a href="#">Elevate</a></li>
-  </ul>
+  <div class="links">
+    <div class="logo-name">
+      <img src="images/logo.png" alt="Logo">
+      <span class="logo-name">Cube</span>
+    </div>
+    <div class="ul-list">
+      <ul>
+        <li>Company</li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Newsroom</a></li>
+        <li><a href="#">Investors</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+      <ul>
+        <li>Products</li>
+        <li><a href="#">Comfort</a></li>
+        <li><a href="#">Cube for business</a></li>
+        <li><a href="#">Cube for education</a></li>
+        <li><a href="#">Life</a></li>
+      </ul>
+      <ul>
+        <li>Global citizenship</li>
+        <li><a href="#">Safety</a></li>
+        <li><a href="#">Diversity</a></li>
+        <li><a href="#">Transparency</a></li>
+      </ul>
+      <ul>
+        <li>Innovation</li>
+        <li><a href="#">ATG</a></li>
+        <li><a href="#">AI</a></li>
+        <li><a href="#">Elevate</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="additional-links">
     <ul class="social-media">
       <li>
@@ -225,8 +193,8 @@
       </li>
     </ul>
     <ul class="download-apps">
-      <li><a href="#"><img src="https://assets.stickpng.com/images/5a902dbf7f96951c82922875.png" alt="Google Play"></a></li>
-      <li><a href="#"><img src="https://assets.stickpng.com/thumbs/5a902db97f96951c82922874.png" alt="App Store"></a></li>
+      <li><a href="#"><img src="images/google-play.png" alt="Google Play" width="200px"></a></li>
+      <li><a href="#"><img src="images/app-store.png" alt="App Store" width="200px"></a></li>
     </ul>
   </div>
   <span class="copy-right">&copy; 2017 Cube Technologies Inc.</span>

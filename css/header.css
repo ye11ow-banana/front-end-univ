@@ -1,0 +1,39 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  width: 50%;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+nav ul li::after {
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #FEFEFE;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+
+nav ul li:hover:after, nav ul li:focus:after {
+    width: 100%;
+}
