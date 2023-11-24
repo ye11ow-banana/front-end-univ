@@ -155,3 +155,7 @@ footer {
 .copy-right {
   height: 100px;
 }
+
+.search-input img:hover {
+  cursor: pointer;
+}

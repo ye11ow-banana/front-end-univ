@@ -35,9 +35,9 @@
       </div>
       <ul>
         <li>Type</li>
-        <li><input type="checkbox">Gas</li>
-        <li><input type="checkbox">Water</li>
-        <li><input type="checkbox">Electricity</li>
+        <li><input type="checkbox" value="gas">Gas</li>
+        <li><input type="checkbox" value="water">Water</li>
+        <li><input type="checkbox" value="electricity">Electricity</li>
         <li>Payment Status</li>
         <li><input type="checkbox">Last payment</li>
         <li><input type="checkbox">Payed</li>
@@ -54,57 +54,12 @@
         <div class="sorting-wrapper">
           <label for="sorting">Sort by</label>
           <select id="sorting" name="sorting">
-              <option value="latest">Latest</option>
-              <option value="newest">Newest</option>
+            <option value="newest">Newest</option>
+            <option value="latest">Latest</option>
           </select>
         </div>
       </div>
-      <div class="results__items">
-        <div class="results__item">
-          <div class="results__item-left">
-            <img src="images/water.png" alt="water icon">
-            <div class="company-name">Glaceau Smartwater</div>
-          </div>
-          <div class="results__item-right">
-            <img src="images/dollar.png" alt="dollar icon">
-            <img src="images/new-tab.png" alt="new tab icon">
-            <span>Pay by 22.11.2023</span>
-          </div>
-        </div>
-        <div class="results__item">
-          <div class="results__item-left">
-            <img src="images/water.png" alt="water icon">
-            <div class="company-name">Aquafina</div>
-          </div>
-          <div class="results__item-right">
-            <img src="images/dollar.png" alt="dollar icon">
-            <img src="images/new-tab.png" alt="new tab icon">
-            <span>Pay by 12.09.2023</span>
-          </div>
-        </div>
-        <div class="results__item">
-          <div class="results__item-left">
-            <img src="images/fire.png" alt="gas icon">
-            <div class="company-name">Southern California Gas Company</div>
-          </div>
-          <div class="results__item-right">
-            <img src="images/dollar.png" alt="dollar icon" >
-            <img src="images/new-tab.png" alt="new tab icon">
-            <span>Pay by 06.08.2023</span>
-          </div>
-        </div>
-        <div class="results__item">
-          <div class="results__item-left">
-            <img src="images/light.png" alt="light icon">
-            <div class="company-name">State Grid Corporation</div>
-          </div>
-          <div class="results__item-right">
-            <img src="images/dollar.png" alt="dollar icon">
-            <img src="images/new-tab.png" alt="new tab icon">
-            <span>Pay by 17.04.2023</span>
-          </div>
-        </div>
-      </div>
+      <div class="results__items"></div>
     </div>
   </div>
 </main>
@@ -199,5 +154,6 @@
   </div>
   <span class="copy-right">&copy; 2017 Cube Technologies Inc.</span>
 </footer>
+<script src="js/search.js"></script>
 </body>
 </html>

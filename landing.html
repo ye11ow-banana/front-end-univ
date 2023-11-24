@@ -108,6 +108,17 @@
       color: #ffffff;
       background-color: #007bff;
     }
+    #searchInput, #lettersInput {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    #results {
+      margin-top: 10px;
+      color: green;
+    }
+    .highlight {
+      background-color: yellow;
+    }
   </style>
 </head>
 <body>
@@ -244,7 +255,10 @@
         <button type="submit">Надіслати</button>
     </form>
     <div id="businessCard">
-      <h1>Можливо краще?</h1>
+      <input type="text" id="searchInput" placeholder="Введіть текст">
+      <input type="text" id="lettersInput" placeholder="Введіть набір літер">
+      <button onclick="performSearch()">Пошук</button>
+      <div id="results"></div>
     </div>
   </main>
 <footer id="footer">
@@ -252,5 +266,21 @@
   <p>ІПЗ-32 Якубець Михайло</p>
   <p>Copyright &copy; 2023</p>
 </footer>
+<script>
+    function performSearch() {
+        const inputText = document.getElementById('searchInput').value.toLowerCase();
+        const searchLetters = document.getElementById('lettersInput').value.toLowerCase();
+        let modifiedText = inputText;
+        let index = modifiedText.indexOf(searchLetters);
+        while (index !== -1) {
+            const replacement = `<span class="highlight">${searchLetters}</span>`;
+            modifiedText = modifiedText.substring(0, index) + replacement +
+                modifiedText.substring(index + searchLetters.length);
+            index = modifiedText.indexOf(searchLetters, index + replacement.length);
+        }
+        let resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML = modifiedText;
+    }
+</script>
 </body>
 </html>
